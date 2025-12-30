@@ -38,3 +38,32 @@ main {
     text-align: left;
   }
 }
+
+.wrapper {
+  border: 1px solid #450d80;
+  border-radius: 40px;
+  padding: 15px;
+}
+
+.content {
+  max-height: 70px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+  
+  &.open {
+    max-height: 3000px;
+    transition: max-height 0.35s ease;
+  }
+}
+
+.btn-toggle {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 12px;
+  min-width: 125px;
+  border-radius: 5px;
+  background-color: #450d80;
+  color: #fff;
+  border: none;
+}
