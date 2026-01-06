@@ -11,7 +11,7 @@ export class UserComponent {
   @Input({required: true}) avatar!: string;
   @Input({required: true}) name!: string;
   // name = input.required<string>();//aproach without Input, but with Signal
-
+  //select = output<string>();// aproach of usage output function, but it is NOT Signal
   @Output() select = new EventEmitter();
 
   get imagePath() {
