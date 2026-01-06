@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -11,9 +11,12 @@ import { Component, Input } from '@angular/core';
 })
 export class UserComponent {
   @Input({required: true}) avatar!: string;
-  @Input({required: true}) name!: string;
+  // @Input({required: true}) name!: string;
+  name = input.required<string>();//aproach without Input, but with Signal
 
   get imagePath() {
     return './assets/users/' + this.avatar;
   }
+
+  onSelectUser()
 } 
