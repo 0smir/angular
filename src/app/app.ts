@@ -11,21 +11,18 @@ import { DUMMY_USERS } from './dummy-users';
    imports: [
     RouterOutlet,
     HeaderComponent, 
-    UserComponent],
+    UserComponent
+  ],
 })
 export class App {
   protected readonly title = signal('my-first-ang-app');
   users = DUMMY_USERS;
-  
+
+  onSelectUser(id: string){
+    console.log('!!!!! user id: ' + id);
+  }
  
   toggleContent() {
     console.log('!!!!!');
-     let content = document.getElementsByClassName('content')[0] as HTMLElement;
-    if(content.classList.contains('open')){
-      content.classList.remove('open');
-    }else {
-      content.classList.add('open');
-    }
-
   }
 }
