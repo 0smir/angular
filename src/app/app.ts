@@ -6,9 +6,12 @@ import { DUMMY_USERS } from './dummy-users';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, UserComponent],
   templateUrl: './app.html',
-  styleUrls: ['./app.scss']
+  styleUrls: ['./app.scss'],
+   imports: [
+    RouterOutlet,
+    HeaderComponent, 
+    UserComponent],
 })
 export class App {
   protected readonly title = signal('my-first-ang-app');
