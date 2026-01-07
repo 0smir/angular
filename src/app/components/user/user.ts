@@ -12,7 +12,7 @@ export class UserComponent {
   @Input({required: true}) name!: string;
   // name = input.required<string>();//aproach without Input, but with Signal
   //select = output<string>();// aproach of usage output function, but it is NOT Signal
-  @Output() select = new EventEmitter();
+  @Output() select = new EventEmitter<string>(); //adding of a type is not required, but it make code more safe
 
   get imagePath() {
     return './assets/users/' + this.avatar;
